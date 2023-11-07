@@ -1,0 +1,30 @@
+{
+  "name": "node-hello-world",
+  "version": "1.0.0",
+  "description": "Primo progetto con node e npm",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "app": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silviosalza/node-hello-world.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "npx"
+  ],
+  "author": "Silvio Salza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silviosalza/node-hello-world/issues"
+  },
+  "homepage": "https://github.com/silviosalza/node-hello-world#readme",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  }
+}
