@@ -4,7 +4,7 @@ const http = require("http");
 
 //importo libreria dotenv
 const dotenv = require("dotenv");
-const { randomSentences } = require("./randomsentences");
+
  //la avvio
 dotenv.config();
 
@@ -26,17 +26,16 @@ const sentences = [
     "La vita è troppo breve per indossare calze noiose. Anche se nessuno le vedrà mai, saranno il tuo segreto di stile!"
   ];
 
-//    function randomSentences(){
+    function randomSentences(){
 
-//     const i = Math.floor(Math.random() * sentences.length);
-//     const randomSentence = sentences[i];
-//     console.log(randomSentence);
-//   }
+     const i = Math.floor(Math.random() * sentences.length);
+     const randomSentence = sentences[i];
+     return randomSentence
+   }
 
 
 
 function htmlResponse(res,content){
-   
     res.writeHead(200, {"Content-Type": "text/html"});
     res.end(content)
 }
@@ -47,8 +46,10 @@ function htmlResponse(res,content){
  *
  */
 const server = http.createServer(function(req, res){
-htmlResponse(res, `<h1>Funziona</h1>
-PIN: ${process.env.PIN} , CVV:${process.env.CVV}`)
+// if(req.url=== "/favicon.ico") req.writeHead((404).end())
+htmlResponse(res, `<h1>Funziona
+PIN: ${process.env.PIN} , CVV:${process.env.CVV}
+, ${randomSentences(sentences)} </h1>`)
 
 })
 
