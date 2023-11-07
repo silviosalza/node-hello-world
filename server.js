@@ -47,7 +47,8 @@ function htmlResponse(res,content){
  *
  */
 const server = http.createServer(function(req, res){
-htmlResponse(res, `<h1>Funziona</h1>`)
+htmlResponse(res, `<h1>Funziona</h1>
+PIN: ${process.env.PIN} , CVV:${process.env.CVV}`)
 
 })
 
