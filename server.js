@@ -49,7 +49,7 @@ const server = http.createServer(function(req, res){
 // if(req.url=== "/favicon.ico") req.writeHead((404).end())
 htmlResponse(res, `<h1>Funziona
 PIN: ${process.env.PIN} , CVV:${process.env.CVV}
-, ${randomSentences(sentences)} </h1>`)
+, ${randomSentences()} </h1>`)
 
 })
 
